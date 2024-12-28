@@ -41,7 +41,7 @@ const Signup = ({ onNavigate,onAuthSuccess }) => {
     // Add image data to formData
     const dataToSend = { ...formData, image: imagePreview };
     try {
-      const response = await axios.post('http://localhost:5000/signup', dataToSend); // Send image data
+      const response = await axios.post('https://server-urf2.onrender.com/signup', dataToSend); // Send image data
       const { user } = response.data;
       alert(response.data.message);
       onAuthSuccess({ ...user, password: formData.password });
