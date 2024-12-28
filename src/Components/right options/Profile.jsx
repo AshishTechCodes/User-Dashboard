@@ -28,7 +28,7 @@ const Profile = ({ userData = {}, onEdit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put('http://localhost:5000/update-profile', {
+      const response = await axios.put('https://server-urf2.onrender.com/update-profile', {
         email, // Email stays constant as the identifier
         ...formData,
       });
